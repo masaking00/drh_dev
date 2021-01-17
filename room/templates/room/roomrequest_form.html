@@ -1,0 +1,19 @@
+{% extends "room/base.html" %}
+{% block content %}
+
+<br>
+<div class="card col-md-6">
+        <div class="card-body">
+            <form method="POST">
+                <p>Room Request</p>
+                <hr>
+                部屋番号　　：　{{ form.room_number }}
+                <hr>
+                リクエスト　：　{{ form.request }}
+                <hr>
+                <button type="submit" class="btn btn-dark">依頼する</button>
+                {% csrf_token %}
+            </form>
+        </div>
+    </div>
+{% endblock %}
